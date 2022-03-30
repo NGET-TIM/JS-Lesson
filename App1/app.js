@@ -40,7 +40,7 @@ function clickBtnCal(ok) {
         total = 0;
     }
 
-    result.innerHTML = total;
+    result.innerHTML = total.toFixed(2);
     console.log(total);
 }
 
@@ -55,3 +55,9 @@ function clickOperator() {
     var getOperator = this.innerHTML;
     document.getElementById('operator').value = getOperator;
 }
+
+// calculator 
+const btnClear = document.getElementsByClassName('clear')[0].addEventListener('click', function() {
+    var hello = document.getElementById('hello');
+    hello.innerText = hello.innerText.slice(0, -1);
+});
